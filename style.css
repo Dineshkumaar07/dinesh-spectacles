@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins";
+}
+ul li {
+    list-style-type: none;
+}
+ul li a{
+    text-decoration: none;
+}
+a{
+    text-decoration: none;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: black;
+}
+.logo{
+    margin-left: 20px;
+    color: #d7cff4;
+}
+.navbar-links{
+    display: flex;
+}
+.navbar-links ul{
+    display: flex;
+    justify-content: space-between;
+}
+.navbar-links ul li{
+    margin-right: 25px;
+}
+
+.navbar-links ul li a{
+    color: #7c7b7b;
+}
+.navbar-links ul li a:hover{
+    color: #edeeee;
+}
+.toggle-button{
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 21px;
+    width:25px;
+    top: 1.5rem;
+    right: 2rem;
+}
+.toggle-button .line{
+    
+    background-color: white;
+    height: 3px;
+    width: 100%;
+  
+
+}
+.banner{
+    position: relative;
+    width: 100%;
+    overflow-x: hidden;
+    height: 100vh;
+    background-image: url('images/head-img.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    
+}
+
+.welcome{
+    
+    font-size: 6vw;
+    color: rgb(14, 2, 12);
+    top: 10vh;
+    left: 4vw;
+    
+}
+
+.glass{
+    display: inline;
+    font-weight: bold;
+    font-size: 5vw;
+    color: rgb(255, 255, 255);
+ 
+}
+.slogan{
+    position: relative;
+    top: 35vh;
+    left: 12vw;
+    /* width: 100%; */
+}
+
+.buy-now{
+    display: inline-block;
+    margin-top: 40px;
+    background-color: black;
+    color: white;
+    padding: 1vw 2vh;
+    border-radius: 3px;
+  
+}
+
+/* For Navbar */
+@media (max-width:900px){
+    .toggle-button{
+        display: flex;
+    }
+    .navbar-links{
+        display: none;
+    }
+    nav{
+        flex-direction: column;
+    }
+    .navbar-links{
+        flex-direction: column;
+    }
+    .navbar-links ul{
+        flex-direction: column;
+    }
+    .navbar-links ul li{
+        margin-top: 20px;
+    }
+    .navbar-links.active{
+        display: flex;
+    }
+    .usr{
+        padding-bottom: 30px;
+    }
+
+}
+
+/* For banner */
+@media (max-width:900px) {
+    .banner{
+        background-size: cover;
+        background-position: center;
+    }
+    .welcome{
+        font-weight: bolder;
+        font-size: 7vw;
+    }
+    .glass{
+        font-size: 7vw;
+        font-weight: 500;
+    }
+    
+}
